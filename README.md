@@ -22,8 +22,7 @@ For professional implementation of this project, several management tools are ut
   2.1 Data Visualization
 
 Figure 1.  Bar Plot of Classes
-https://keep.google.com/u/0/media/v2/1qSYRhuOwm3nvSc9R8JWah9HUiTd4xdG_7vhUQVItb2wqgC4Hurzw9ah6X5zojck/1vPaiA8rfRVoH30AHAuGlJeePGt0qhvfug22pCdAcN92wnaZb86PU0Wfp_Eu5gVY?sz=512&accept=image%2Fgif%2Cimage%2Fjpeg%2Cimage%2Fjpg%2Cimage%2Fpng%2Cimage%2Fwebp
-
+![image](https://user-images.githubusercontent.com/47839751/221707195-418d5ccf-f10a-4c43-bb66-29decf68968c.png)
 2.1.1 Bar Plot of Classes
 
 	We used a bar chart to visualize the number of instances in each class. The bar chart reflected the findings of value_counts. It is evident that the speed limit label is dominating while the other labels are underrepresented. This calls for data augmentation to balance classes before applying classification machine learning models to avoid model bias. 

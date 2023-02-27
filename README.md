@@ -22,6 +22,7 @@ For professional implementation of this project, several management tools are ut
   2.1 Data Visualization
 
 Figure 1.  Bar Plot of Classes
+https://keep.google.com/u/0/media/v2/1qSYRhuOwm3nvSc9R8JWah9HUiTd4xdG_7vhUQVItb2wqgC4Hurzw9ah6X5zojck/1vPaiA8rfRVoH30AHAuGlJeePGt0qhvfug22pCdAcN92wnaZb86PU0Wfp_Eu5gVY?sz=512&accept=image%2Fgif%2Cimage%2Fjpeg%2Cimage%2Fjpg%2Cimage%2Fpng%2Cimage%2Fwebp
 
 2.1.1 Bar Plot of Classes
 

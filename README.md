@@ -77,16 +77,11 @@ By examining the histograms, we can get a sense of the color composition of each
 For the ‘Crosswalk’ class, the colors have relatively equal frequency throughout the chart, so it can be inferred that the color distribution in the class is balanced. There is a slightly higher distribution of blue in most of these images, but overall it is relatively evenly balanced. For the ‘Speed Limit’ class, there is slightly more distribution of green and blue colors than the red colors, but overall the color distribution is balanced. For the ‘Stop Sign’ class, there is a large amount of variance for the amount of blue coloring in the image. Some of the images are completely devoid of the blue color, while around 2.5% of the images classified as stop signs are almost completely saturated with blue. For the ‘Traffic Light’ class, the color distribution of the images are balanced. However, there are a few images completely devoid of one of the colors.
 The color variations in the ‘Crosswalk” and ‘Speedlimit” show that the model can learn from those colors to classify between two classes. However, this is not the case for ‘Trafficlight’ and ‘Stop’, where the color variations are similar following almost a unimodal distribution for colors. Besides, there are some peaks in most of the classes around the sides of the images. These can be possible outliers that need to be handled by cropping the images around those peaks. For instance, ‘Stop’ can be cropped between 25 and 225 to eliminate the peaks at both ends. 
 
-
-2.2 Outliers
-
-We applied the Local Outlier Factor (LOF) on our images to detect images that are outliers compared to their nearest 10 neighbors. To be able to apply this predictor, we dropped the “class” and “filename” columns, so the model would not be skewed towards the majority class in the dataset. We deemed images with a score less than 0.97 as outliers. 
-
-2.3 Image transformation
+2.2 Image transformation
 
 For our images with the bounding-box, we are additionally transforming our those generated images via a slight rotation. Doing this to the images makes sure that the bounding-box will still be around the class even if the image is at a different location.
 
-2.4 Data Augmentation
+2.3 Data Augmentation
 
 Additional data must be created to balance the underrepresented classes.
 

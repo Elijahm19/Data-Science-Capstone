@@ -1,6 +1,5 @@
 ABSTRACT-
-With the rise of artificial intelligence and the advancements in technology, the need for proper traffic sign recognition is important for aiding driver awareness of speed limits and other road signs. With autonomous, self-driving cars, it is very vital for the program to recognize different traffic signals to avoid any catastrophic accidents. The goal of our project is to analyze various traffic signs/signals and categorize them for autonomous vehicles to recognize signs effectively in order to increase road safety. Traffic sign recognition (TSR) can improve road safety by providing real-time information to drivers about their surroundings, such as speed limits, stop signs, and road conditions. Also, TSR may impact drivers’ behavior since they are aware of their surroundings due to the real-time feedback about their speed and compliance with traffic laws. Very likely in the future, the amount of self-driving cars and cars with advanced technology will rise drastically, so this technology has an essential real-world use. In summary, traffic sign recognition systems are a technology that can help with improving road safety, enhancing navigation, improving traffic flow, enhancing autonomous driving, and improving driver behavior.
-In this project a number of road sign images will be processed using convolutional neural networks (CNN). Since this is a multi-class classification problem, the results of the processed images will be fed into classification machine learning models such as Random Forest, Gaussian Mixture Model, and One-vs-All multi-class Logistic Regression. The models will classify the images into four classes: traffic light, stop sign, speed limit, or crosswalk. Models will be evaluated and deployment recommendations will be provided.
+With the rise of artificial intelligence (A.I.) and the advancements in technology, the need for proper road sign recognition is important for aiding driver awareness of road signs. When considering autonomous vehicles, it is vital for the vehicle to recognize different road signs to avoid accidents. The goal of our project is to analyze various road signs and categorize them for autonomous vehicles to recognize signs effectively to increase road safety. Traffic sign recognition (TSR) can improve road safety by providing real-time information to drivers about their surroundings including  speed limits, stop signs, and road conditions.
 ____________________________________________________________________________________________________________________________________________________________
 Progress report-
 
@@ -8,7 +7,8 @@ Business Understanding
 
 1.1 Business Problem
 
-As artificial intelligence and technology continue to advance, it has become increasingly crucial to ensure proper traffic sign recognition to enhance driver awareness of speed limits and other road signs. With the advent of autonomous, self-driving cars, the importance of accurate traffic signal recognition cannot be overstated, as any failure in this regard could lead to catastrophic accidents. Our project aims to analyze various traffic signs and signals, categorize them, and develop effective recognition systems for autonomous vehicles, thereby significantly increasing road safety. Real-time traffic sign recognition can provide drivers with essential information about their surroundings, such as speed limits, stop signs, and road conditions, thereby contributing to improved road safety. Additionally, such systems can positively impact driver behavior by providing real-time feedback on speed and compliance with traffic laws. Given the projected rise in self-driving cars and cars with advanced technology, traffic sign recognition technology has become an essential real-world application. 
+As artificial intelligence (A.I.)  and technology continue to advance, it has become increasingly crucial to ensure proper traffic sign recognition (TSR) to enhance driver awareness of speed limits and other road signs. With the advent of autonomous vehicles the importance of accurate TSR cannot be overstated, as low accuracy can lead to accidents. Our project aims to analyze various traffic signs and traffic lights, categorize them, and develop an effective recognition system for autonomous vehicles. Real-time TSR can provide drivers with vital information about their surroundings including speed limits, stop signs, and road conditions, thereby contributing to improved road safety. 
+Additionally, such systems can positively impact driver behavior by providing real-time feedback on speed and compliance with traffic laws. Given the projected rise in self-driving cars and cars with advanced technology, TSR technology has become an essential real-world application. Our solution will be to classify traffic lights, stop signs, speed limits, and crosswalks.
 
 1.2 Dataset 
 
@@ -16,7 +16,7 @@ The original dataset is split into two folders: one that contains the png images
 
 1.3 Proposed Analytics Solution
 
-The objective of this project is to process a set of road sign images using convolutional neural networks (CNNs). Given that this is a multi-class classification problem, the output from the processed images will be fed into machine learning models for classification, including Random Forest, Gaussian Mixture Model, and One-vs-All multi-class Logistic Regression. The aim is to classify the images into four classes: traffic light, stop sign, speed limit, or crosswalk. Once the models are trained, they will be evaluated, and recommendations for deployment will be provided. By leveraging CNNs and machine learning models, this project seeks to achieve efficient and accurate classification of road signs.
+The objective of this project is to process a set of road sign images using convolutional neural networks (CNNs). The aim is to classify the images into four classes: traffic light, stop sign, speed limit, or crosswalk. Once the models are trained, they will be evaluated, and recommendations for deployment will be provided. By leveraging CNNs, this project seeks to achieve efficient and accurate classification of road signs.
 
 For professional implementation of this project, several management tools are utilized. Trello is a visual collaboration tool that gives teams a shared perspective on any project. It provides us a shared space to organize and collaborate. We are using Trello to set project goals, guidelines, and deadlines. Additionally, we are using Slack to communicate, share information, ask questions and clarifications about project details. Besides, we are using ML flow, which is a platform that helps manage end-to-end machine learning lifecycle. It provides a suite of tools to track experiments, package code into reproducible runs, and share and deploy models.Additionally, we are using ARCTIC, Georgia State’s advanced computing technology. With the use of ARCTIC we are able to satisfy our high computational needs in regards to running our models efficiently.
 
@@ -30,6 +30,7 @@ Firstly, we visualized our images and annotations into a dataframe, then we conv
 Figure 1.  Bar Plot of Classes
 
 ![image](https://user-images.githubusercontent.com/47839751/221710107-3f3fd09f-efbf-470a-908a-3339e47b9068.png)
+(Please Click)
 
 2.1.1 Bar Plot of Classes
 
@@ -83,5 +84,13 @@ For our images with the bounding-box, we are additionally transforming our those
 
 2.3 Data Augmentation
 
-Additional data must be created to balance the underrepresented classes.
+Slight rotations help the model identify each class despite the position of the sign in testing data.
 
+2.4 Results
+
+For evaluating the model, we set the batch size to 32 which represents around 20% of the training dataset, since the size of a batch must be less than or equal to the number of samples in the training dataset. The model was tested several times with variable quantities of epochs to prevent overfitting or underfitting. We set the learning rate to 1^e-3, which controls how quickly the nodes change the values of their weights.
+After running the neural network model with 5 epochs, the model had an accuracy of 87%. The model was then run with 100 epochs, which had an accuracy of 92%. As shown in the confusion matrix below, the model accurately classified images with speed limit signs, stop sign, and crosswalk signs, with an accuracy of 87%, 89%, and 86% respectively. However, the model struggled to correctly detect traffic lights demonstrated by the 64% accuracy. This may have been caused due to the relatively lower amount of training data for traffic lights compared to the other classes. When increasing the batch size, the model more accurately guesses the speed limit class at the expense of drastically decreasing the accuracy of the other three classes.
+
+2.5 Conclusion
+
+In conclusion, our study demonstrates the importance of accurate traffic sign recognition in the context of autonomous vehicles. The GoogLeNet model achieved a high level of accuracy in identifying traffic signs, such as speed limits, stop signs, and crosswalks, but faced challenges with traffic lights. Our model worked best when we created a batch size of 32 and generated 100 epochs. Our findings emphasize the need for continued research and data collection to improve traffic sign recognition technology and enhance road safety in autonomous vehicles. Ultimately, the successful implementation of these recognition systems can help prevent catastrophic accidents and make our roads safer for all drivers.

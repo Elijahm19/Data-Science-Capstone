@@ -1,8 +1,6 @@
 ABSTRACT-
 With the rise of artificial intelligence (A.I.) and the advancements in technology, the need for proper road sign recognition is important for aiding driver awareness of road signs. When considering autonomous vehicles, it is vital for the vehicle to recognize different road signs to avoid accidents. The goal of our project is to analyze various road signs and categorize them for autonomous vehicles to recognize signs effectively to increase road safety. Traffic sign recognition (TSR) can improve road safety by providing real-time information to drivers about their surroundings including  speed limits, stop signs, and road conditions.
 ____________________________________________________________________________________________________________________________________________________________
-Progress report-
-
 Business Understanding
 
 1.1 Business Problem
